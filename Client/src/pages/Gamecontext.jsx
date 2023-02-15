@@ -3,7 +3,8 @@ export const Details = createContext();
 import { useState } from 'react';
 
 export default function GameContext({ children }) {
-    const [checker,setchecker] = useState(0)
+    const [token, setToken] = useState(JSON.parse(localStorage.getItem('myToken')));
+    localStorage.setItem("myToken", JSON.stringify(token));
     const [game,setGame] = useState([{
         gameId: '0',
         player1: "nati",
@@ -120,9 +121,10 @@ export default function GameContext({ children }) {
     return (
       <Details.Provider
         value={{
-       game,
-       setGame,
-       checker,setchecker,
+          game,
+          setGame,
+          token,
+          setToken,
         }}
       >
         {children}

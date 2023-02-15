@@ -8,21 +8,27 @@ import SignUp from './pages/SignUp';
 import GroupStage from './pages/GroupStage';
 import CreateTournament from './pages/CreateTournament';
 import AllGroupStages from './pages/AllGroupStages';
+import { Details } from "./pages/Gamecontext"
+import { useContext } from "react";
+import STAG from './pages/STAG';
 function App() {
+  const { token } = useContext(Details);
   return (
     <div className="App">
-      <NavLink to="/CreateTournament">צור טורניר</NavLink>
-      <NavLink to="/AllPlayers">טבלת שחקנים</NavLink>
-      <NavLink to="/AllGroupStages">עריכת שלב הבתים</NavLink>
+      {token && <NavLink to="/CreateTournament">צור טורניר</NavLink>}
+      {token && <NavLink to="/AllPlayers">טבלת שחקנים</NavLink>}
+      {token && <NavLink to="/AllGroupStages">עריכת שלב הבתים</NavLink>}
+      <NavLink to="/HomePage">עמוד הבית</NavLink>
+      <NavLink to="/Scores">תוצאות</NavLink>
       <Routes>
         <Route path="/HomePage" element={<HomePage />}></Route>
+        <Route path="/EditStage" element={<STAG />}></Route>
         <Route path="/SignUp" element={<SignUp />}></Route>
         <Route path="/" element={<LogIn />}></Route>
         <Route path="/AllPlayers" element={<AllPlayers />}></Route>
         <Route path="/AllGroupStages" element={<AllGroupStages />}></Route>
         <Route path="/CreateTournament" element={<CreateTournament />}></Route>
       </Routes>
-
     </div>
   );
 }

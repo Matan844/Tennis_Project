@@ -1,7 +1,11 @@
 import {React,useState} from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Details } from "./Gamecontext";
+import { useContext } from "react";
+
 const LogIn = () => {
+  const { token, setToken } = useContext(Details);
   const [userName, setUserName] = useState("")
   const [password, setPassword] = useState("")
   const navigate=useNavigate()
@@ -13,8 +17,7 @@ const LogIn = () => {
       })
       .then((res) => {
         console.log(res.data);
-        console.log(res.data);
-
+        setToken(res.data.token)
         navigate("/AllPlayers");
       })
       .catch((error) => {});
