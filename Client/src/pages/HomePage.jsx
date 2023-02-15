@@ -1,9 +1,11 @@
 import React from 'react'
+import TournamentCard from './Tournament'
 
 const HomePage = () => {
   return (
     <div>
-    <h1>ברוך הבא לאליפות הטניס הפתוחה</h1>
+    <h1> התחרויות שלנו</h1>
+    <TournamentCard/>
     </div>
   )
 }

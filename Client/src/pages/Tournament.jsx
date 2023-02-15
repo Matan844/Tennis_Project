@@ -5,7 +5,7 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
-export default function TournamentIOP() {
+export default function TournamentCard() {
   return (
     <Card sx={{ minWidth: "275px", width: "10px" }} dir="rtl">
       <CardContent>
