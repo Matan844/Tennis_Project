@@ -1,0 +1,32 @@
+.form-wrapper{
+    display: flex;
+    justify-content:right;
+    padding: 2rem;
+    /* background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/https://d1e00ek4ebabms.cloudfront.net/production/3328878e-9f85-4874-839f-3a57134e6808.jpg?source=next&fit=scale-down&quality=highest&width=1440');    background-repeat: no-repeat; */
+    background-size: cover;
+    background-attachment: fixed;
+    height: 120vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8vh;
+    opacity: 0.85;
+    width: 50vw;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+label>input {
+    padding: 8px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
