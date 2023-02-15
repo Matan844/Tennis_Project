@@ -1,0 +1,32 @@
+table {
+    border-collapse: collapse;
+    width: 60%;
+    font-family: Arial, sans-serif;
+
+}
+
+th {
+    text-align: left;
+    background-color: #ddd;
+    font-size: 15px;
+    padding: 10px;
+}
+
+td {
+    text-align: left;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+
+/* optional: add a border around the table */
+table {
+    border: 1px solid #ddd;
+}
