@@ -2,12 +2,14 @@ import './App.css';
 import Tournament from './Tournament';
 import Tableparticipants from './Tableparticipants';
 import NewTournament from './NewTournament'
+import CustomizedTables from './GroupStage'
 function App() {
   return (
     <div className="App" dir='rtl'>
-        <Tournament></Tournament>
+        {/* <Tournament></Tournament>
         <Tableparticipants></Tableparticipants>
-        <NewTournament></NewTournament>
+        <NewTournament></NewTournament> */}
+        <CustomizedTables></CustomizedTables>
     </div>
   );
 }
