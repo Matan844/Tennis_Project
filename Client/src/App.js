@@ -1,3 +1,4 @@
+
 import { NavLink, Route, Routes } from 'react-router-dom';
 import './App.css';
 import AllPlayers from './pages/AllPlayers';
@@ -21,6 +22,7 @@ function App() {
         <Route path="/AllGroupStages" element={<AllGroupStages />}></Route>
         <Route path="/CreateTournament" element={<CreateTournament />}></Route>
       </Routes>
+
     </div>
   );
 }
