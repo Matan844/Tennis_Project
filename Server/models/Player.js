@@ -15,7 +15,6 @@ const playerSchema = new mongoose.Schema({
   },
   medicalCertificate: {
     type: String,
-    default:"לא"
   },
   category: {
     type: String,

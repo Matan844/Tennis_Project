@@ -1,32 +1,94 @@
-.form-wrapper{
+.form-container {
     display: flex;
-    justify-content:right;
-    padding: 2rem;
-    /* background-image: url('https://www.ft.com/__origami/service/image/v2/images/raw/https://d1e00ek4ebabms.cloudfront.net/production/3328878e-9f85-4874-839f-3a57134e6808.jpg?source=next&fit=scale-down&quality=highest&width=1440');    background-repeat: no-repeat; */
-    background-size: cover;
-    background-attachment: fixed;
-    height: 120vh;
+    justify-content: center;
+    margin-top: 20px;
+    background-image: url('https://media.architecturaldigest.com/photos/60d5e6657d0bcd2fb0bfe9cc/master/w_1920%2Cc_limit/Tennis%2520III%2520.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        background-size: center center;
+        margin: 0;
 }
-form {
+
+.form {
     display: flex;
     flex-direction: column;
-    margin: 0 auto;
+    align-items: center;
+    direction: rtl;
     background-color: white;
-    border-radius: 8vh;
-    opacity: 0.85;
-    width: 50vw;
+    opacity: 0.9;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+    width: 40%;
 }
 
-label {
+.form-element {
     display: flex;
     flex-direction: column;
-    margin-bottom: 16px;
+    margin-bottom: 20px;
+    width: 100%;
 }
 
-label>input {
-    padding: 8px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
+.form-element label {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #333;
+    font-weight: bold;
 }
 
+.form-element input,
+.form-element select,
+.form-element textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.form-element select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>') no-repeat right 12px center;
+    background-size: 18px 18px;
+}
+
+.form-element input:focus,
+.form-element select:focus,
+.form-element textarea:focus {
+    outline: none;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+}
+
+.form-element .MuiFormControlLabel-root {
+    margin-right: 0;
+    margin-left: auto;
+}
+
+.form-element .MuiCheckbox-root {
+    color: #333;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+button[type='submit'] {
+    margin-top: 20px;
+    background-color: #3f51b5;
+    color: #fff;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+button[type='submit']:hover {
+    background-color: #303f9f;
+}
