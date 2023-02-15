@@ -20,22 +20,19 @@ const AllPlayers = () => {
     { field: "dateOfBirth", headerName: "תאריך לידה", width: 100 },
     { field: "playerId", headerName: "ת.ז", width: 100 },
     { field: "medicalCertificate", headerName: "אישור רפואי", width: 90 },
-    { field: "category", headerName: "קטגוריה", width: 70 },
+    { field: "category", headerName: "קטגוריה", width: 240 },
     { field: "notes", headerName: "הערות", width: 100 },
   ];
   let rows = [];
   for (let i = 0; i < players?.length; i++) {
-    console.log(players[i].medicalCertificate);
-    if (players[i].medicalCertificate === "") {
-        players[i].medicalCertificate="לא"
-    } 
+   
     rows.push({
       id: i + 1,
       fullName: players[i].fullName,
       grade: players[i].grade,
       dateOfBirth: players[i].dateOfBirth,
       playerId: players[i].playerId,
-      medicalCertificate: players[i].medicalCertificate,
+      medicalCertificate: players[i].medicalCertificate?"יש":"אין",
       category: players[i].category,
       notes: players[i].notes,
     });
