@@ -19,7 +19,7 @@ const ScoresDraw = ({
 }) => {
   console.log(tournament);
   return (
-    <TableContainer component={Paper} sx={{ maxWidth: 600 }}>
+    <TableContainer component={Paper} sx={{ maxWidth: 600 , display:"flex", flexDirection:"column", marginRight: "23vw" ,marginTop:"7vh"}}>
       <h7 sx={{ fontWeight: "bold" }} align="center">
         {groupName}
       </h7>

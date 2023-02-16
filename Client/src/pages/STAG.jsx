@@ -5,7 +5,9 @@ import EditStage from "./EditStage";
 import {Details} from "./Gamecontext";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
+import { Button } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import ImageMq from "../images/image2.jpg"
 export default function STAG(params) {
     
     const {game,setGame,token} = useContext(Details);
@@ -13,6 +15,8 @@ export default function STAG(params) {
     const [tournamentName, setTournamentName] = useState("");
     const [tournamentPlace, setTournamentPlace] = useState("");
     const [numOfGroup, setNumOfGroup] = useState(0);
+  const navigate=useNavigate()
+
     useEffect(() => {
       axios
         .get("http://localhost:8000/getAllTournaments", {})
@@ -40,17 +44,19 @@ export default function STAG(params) {
         });
     };
   return (
-    <div>
+    <div style={{  backgroundImage: `url(${ImageMq})`,    backgroundSize: "cover" }}>
+        <Button variant="contained" size="large" onClick={() => navigate("/Scores")} >שלב הבתים</Button>
+      <Button variant="contained" size="large" onClick={() => navigate("/EditStage")} disabled>בית הגמר</Button>
       <h1>בחר טורניר </h1>
-      <p> {tournament[tournamentPlace]?.finals[0]?.player1}</p>
       {tournament &&
         tournament?.map((t, i) => (
-          <button key={i} onClick={() => showTournament(t.tournamentName, i)}>
+            <Button variant="contained" color="success" sx={{margin:'10px'}} key={i} onClick={() => showTournament(t.tournamentName, i)}>
             {t.tournamentName}
-          </button>
+          </Button>
         ))}
       <br />
-      <Box sx={{ width: 1 }} style={{ backgroundColor: "gray" }}>
+      <Box sx={{ width: 1 }} style={{ backgroundColor: "none"
+    , height:"100vh" , backgroundSize: 'cover'}}>
         <Box
           display="grid"
           gridTemplateColumns="repeat(12, 1fr)"
@@ -236,7 +242,6 @@ export default function STAG(params) {
       </Box>
       {/* //   )})} */}
      {token&&<EditStage />} 
-      <button>submit</button>
     </div>
   );
 }
