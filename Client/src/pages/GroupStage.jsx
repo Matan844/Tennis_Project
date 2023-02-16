@@ -45,8 +45,9 @@ export default function GroupStage({
       });
   };
   return (
-    <div  style={{display: 'flex',
-      justifyContent: 'center' ,margin:'20px'}}   >
+
+    <div >
+
       <button onClick={Update}>אשר שינויים</button>
       <table>
         <thead>

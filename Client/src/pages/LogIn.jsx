@@ -3,6 +3,9 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { Details } from "./Gamecontext";
 import { useContext } from "react";
+import { Card, CardContent, TextField, Button } from "@mui/material";
+
+
 
 const LogIn = () => {
   const { token, setToken } = useContext(Details);
@@ -18,18 +21,35 @@ const LogIn = () => {
       .then((res) => {
         console.log(res.data);
         setToken(res.data.token)
-        navigate("/AllPlayers");
+        navigate("/");
       })
       .catch((error) => {});
   }
+
   return (
-    <div>
-      <h1>התחבר כדי לנהל את התחרות</h1>
-      <input placeholder="שם משתמש" onChange={(e)=>setUserName(e.target.value)}></input>
-      <input placeholder="סיסמא" onChange={(e)=>setPassword(e.target.value)}></input>
-    <button onClick={handleSubmit}>התחבר</button>
-    </div>
-  )
+    <Card sx={{ boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.1)", width: 400 }}>
+      <CardContent>
+        <h1>התחבר כדי לנהל את התחרות</h1>
+        <TextField
+          fullWidth
+          label="שם משתמש"
+          variant="outlined"
+          margin="normal"
+          onChange={(e) => setUserName(e.target.value)}
+        />
+        <TextField
+          fullWidth
+          label="סיסמא"
+          variant="outlined"
+          margin="normal"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          התחבר
+        </Button>
+      </CardContent>
+    </Card>
+  );
 }
 
 export default LogIn

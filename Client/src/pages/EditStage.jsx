@@ -13,6 +13,8 @@ export default function EditStage() {
 const [tournament, setTournament] = useState("");
 const [tournamentName, setTournamentName] = useState("");
 const [tournamentPlace, setTournamentPlace] = useState("");
+const [exist, setExist] = useState(false);
+
 const [numOfGroup, setNumOfGroup] = useState(0);
   function handlechangeplayer1(event,index) {
     let gameclone = game;
@@ -50,10 +52,20 @@ const [numOfGroup, setNumOfGroup] = useState(0);
       });
   }, []);
 const Update = async () => {
+  for (let i = 0; i < game.length; i++) {
+    if(game[i].player1||game[i].player2
+      ||game[i].player2score||game[i].player1score){
+        setExist(true)
+      }else{
+        i=game.length
+        setExist(false)
+      }
+  }
+  if(game){
   await axios
     .post("http://localhost:8000/updateFinals", {
-      tournamentName: "finala",
-      game:game,
+      tournamentName: tournamentName,
+      game: game,
     })
     .then((res) => {
       console.log(res.data);
@@ -62,6 +74,7 @@ const Update = async () => {
     .catch((error) => {
       console.log(error);
     });
+  }
 };
  const showTournament = async (name, index) => {
    setTournamentName(name);
