@@ -1,6 +1,8 @@
 import React from 'react'
 import GroupStage from './GroupStage'
 import axios from 'axios'
+import ImageMq from "../images/image2.jpg"
+
 import { useState,useEffect } from 'react'
 const AllGroupStages = () => {
     const [tournament, setTournament] = useState("");
@@ -50,8 +52,8 @@ const AllGroupStages = () => {
         const timesArray = Array.from(Array(numOfGroup));
 
   return (
-    <div>
-      <h1>בחר בטורניר שתרצה לערוך</h1>
+    <div style={{  backgroundImage: `url(${ImageMq})`,    backgroundSize: "cover"  ,height:"100vh" } }>
+      <h1 style={{marginTop:"0px"}}>בחר בטורניר שתרצה לערוך</h1>
       {tournament &&
         tournament?.map((t, i) => (
          
