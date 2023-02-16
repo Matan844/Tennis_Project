@@ -7,7 +7,6 @@ const AllGroupStages = () => {
     const [tournamentName, setTournamentName] = useState("");
     const [tournamentPlace, setTournamentPlace] = useState("");
     const [numOfGroup, setNumOfGroup] = useState(0);
-    const [show, setShow] = useState(0);
      useEffect(() => {
        axios
          .get("http://localhost:8000/getAllTournaments", {})
@@ -18,7 +17,7 @@ const AllGroupStages = () => {
          .catch((error) => {
            console.log(error);
          });
-     }, [show]);
+     }, []);
     const AddGroup=async(name)=>{
         await axios
           .post("http://localhost:8000/addGroup", {

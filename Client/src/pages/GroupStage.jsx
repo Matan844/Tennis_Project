@@ -84,7 +84,7 @@ export default function GroupStage({
           <tr>
             <td></td>
             <td>
-              {tournament[tournamentPlace]?.groupStage[groupIndex]?.scores[0]}
+              {tournament[tournamentPlace]?.groupStage[groupIndex]?.players[0]}
             </td>
             <td>X</td>
             <td>
@@ -108,7 +108,7 @@ export default function GroupStage({
           <tr>
             <td></td>
             <td>
-              {tournament[tournamentPlace]?.groupStage[groupIndex]?.players[0]}
+              {tournament[tournamentPlace]?.groupStage[groupIndex]?.players[1]}
             </td>
             <td>
               <input

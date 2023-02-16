@@ -22,7 +22,8 @@ const CreateTournament = (props) => {
             tournamentName,
             dateStart,
             dateFinish,
-            groupStage:{players,scores}
+            groupStage:{players,scores},
+            finals:{players,scores}
           })
           .then((res) => {
             console.log(res.data);

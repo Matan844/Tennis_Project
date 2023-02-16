@@ -87,6 +87,26 @@ console.log(tournamentName, index, players, scores);
   // Send a success response
   
 };
+exports.updateFinals = (req, res) => {
+  const { tournamentName, game } = req.body;
+  console.log(tournamentName, game);
+
+  // Find the tournament document
+  Tournament.findOneAndUpdate(
+    { tournamentName: tournamentName },
+    { finals: game },
+    { new: true }, // To return the updated tournament object
+    (err, updatedTournament) => {
+      if (err) {
+        console.error(err);
+        return;
+      }
+      console.log(updatedTournament);
+    }
+  );
+
+  // Send a success response
+};
 
 exports.addGroup = (req, res) => {
   const tournamentName = req.body.tournamentName;
