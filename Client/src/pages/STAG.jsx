@@ -64,66 +64,66 @@ export default function STAG(params) {
         >
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[0].player1}
-              player2={tournament[tournamentPlace]?.finals[0].player2}
-              player1score={tournament[tournamentPlace]?.finals[0].player1score}
-              player2score={tournament[tournamentPlace]?.finals[0].player2score}
+              player1={tournament[tournamentPlace]?.finals[0]?.player1}
+              player2={tournament[tournamentPlace]?.finals[0]?.player2}
+              player1score={tournament[tournamentPlace]?.finals[0]?.player1score}
+              player2score={tournament[tournamentPlace]?.finals[0]?.player2score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[1].player1}
-              player2={tournament[tournamentPlace]?.finals[1].player2}
-              player2score={tournament[tournamentPlace]?.finals[1].player2score}
-              player1score={tournament[tournamentPlace]?.finals[1].player1score}
+              player1={tournament[tournamentPlace]?.finals[1]?.player1}
+              player2={tournament[tournamentPlace]?.finals[1]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[1]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[1]?.player1score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[2].player1}
-              player2={tournament[tournamentPlace]?.finals[2].player2}
-              player2score={tournament[tournamentPlace]?.finals[2].player2score}
-              player1score={tournament[tournamentPlace]?.finals[2].player1score}
+              player1={tournament[tournamentPlace]?.finals[2]?.player1}
+              player2={tournament[tournamentPlace]?.finals[2]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[2]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[2]?.player1score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[3].player1}
-              player2={tournament[tournamentPlace]?.finals[3].player2}
-              player2score={tournament[tournamentPlace]?.finals[3].player2score}
-              player1score={tournament[tournamentPlace]?.finals[3].player1score}
+              player1={tournament[tournamentPlace]?.finals[3]?.player1}
+              player2={tournament[tournamentPlace]?.finals[3]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[3]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[3]?.player1score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[4].player1}
-              player2={tournament[tournamentPlace]?.finals[4].player2}
-              player2score={tournament[tournamentPlace]?.finals[4].player2score}
-              player1score={tournament[tournamentPlace]?.finals[4].player1score}
+              player1={tournament[tournamentPlace]?.finals[4]?.player1}
+              player2={tournament[tournamentPlace]?.finals[4]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[4]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[4]?.player1score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[5].player1}
-              player2={tournament[tournamentPlace]?.finals[5].player2}
-              player2score={tournament[tournamentPlace]?.finals[5].player2score}
-              player1score={tournament[tournamentPlace]?.finals[5].player1score}
+              player1={tournament[tournamentPlace]?.finals[5]?.player1}
+              player2={tournament[tournamentPlace]?.finals[5]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[5]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[5]?.player1score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[6].player1}
-              player2={tournament[tournamentPlace]?.finals[6].player2}
-              player2score={tournament[tournamentPlace]?.finals[6].player2score}
-              player1score={tournament[tournamentPlace]?.finals[6].player1score}
+              player1={tournament[tournamentPlace]?.finals[6]?.player1}
+              player2={tournament[tournamentPlace]?.finals[6]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[6]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[6]?.player1score}
             />
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[7].player1}
-              player2={tournament[tournamentPlace]?.finals[7].player2}
-              player2score={tournament[tournamentPlace]?.finals[7].player2score}
-              player1score={tournament[tournamentPlace]?.finals[7].player1score}
+              player1={tournament[tournamentPlace]?.finals[7]?.player1}
+              player2={tournament[tournamentPlace]?.finals[7]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[7]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[7]?.player1score}
             />
           </Box>
         </Box>
@@ -140,41 +140,41 @@ export default function STAG(params) {
         >
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[8].player1}
-              player2={tournament[tournamentPlace]?.finals[8].player2}
-              player2score={tournament[tournamentPlace]?.finals[8].player2score}
-              player1score={tournament[tournamentPlace]?.finals[8].player1score}
+              player1={tournament[tournamentPlace]?.finals[8]?.player1}
+              player2={tournament[tournamentPlace]?.finals[8]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[8]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[8]?.player1score}
             />{" "}
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[9].player1}
-              player2={tournament[tournamentPlace]?.finals[9].player2}
-              player2score={tournament[tournamentPlace]?.finals[9].player2score}
-              player1score={tournament[tournamentPlace]?.finals[9].player1score}
+              player1={tournament[tournamentPlace]?.finals[9]?.player1}
+              player2={tournament[tournamentPlace]?.finals[9]?.player2}
+              player2score={tournament[tournamentPlace]?.finals[9]?.player2score}
+              player1score={tournament[tournamentPlace]?.finals[9]?.player1score}
             />{" "}
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[10].player1}
-              player2={tournament[tournamentPlace]?.finals[10].player2}
+              player1={tournament[tournamentPlace]?.finals[10]?.player1}
+              player2={tournament[tournamentPlace]?.finals[10]?.player2}
               player2score={
-                tournament[tournamentPlace]?.finals[10].player2score
+                tournament[tournamentPlace]?.finals[10]?.player2score
               }
               player1score={
-                tournament[tournamentPlace]?.finals[10].player1score
+                tournament[tournamentPlace]?.finals[10]?.player1score
               }
             />{" "}
           </Box>
           <Box gridColumn="span 3">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[11].player1}
-              player2={tournament[tournamentPlace]?.finals[11].player2}
+              player1={tournament[tournamentPlace]?.finals[11]?.player1}
+              player2={tournament[tournamentPlace]?.finals[11]?.player2}
               player2score={
-                tournament[tournamentPlace]?.finals[11].player2score
+                tournament[tournamentPlace]?.finals[11]?.player2score
               }
               player1score={
-                tournament[tournamentPlace]?.finals[11].player1score
+                tournament[tournamentPlace]?.finals[11]?.player1score
               }
             />{" "}
           </Box>
@@ -193,25 +193,25 @@ export default function STAG(params) {
         >
           <Box gridColumn="span 6">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[12].player1}
-              player2={tournament[tournamentPlace]?.finals[12].player2}
+              player1={tournament[tournamentPlace]?.finals[12]?.player1}
+              player2={tournament[tournamentPlace]?.finals[12]?.player2}
               player2score={
-                tournament[tournamentPlace]?.finals[12].player2score
+                tournament[tournamentPlace]?.finals[12]?.player2score
               }
               player1score={
-                tournament[tournamentPlace]?.finals[12].player1score
+                tournament[tournamentPlace]?.finals[12]?.player1score
               }
             />
           </Box>
           <Box gridColumn="span 6">
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[13].player1}
-              player2={tournament[tournamentPlace]?.finals[13].player2}
+              player1={tournament[tournamentPlace]?.finals[13]?.player1}
+              player2={tournament[tournamentPlace]?.finals[13]?.player2}
               player2score={
-                tournament[tournamentPlace]?.finals[13].player2score
+                tournament[tournamentPlace]?.finals[13]?.player2score
               }
               player1score={
-                tournament[tournamentPlace]?.finals[13].player1score
+                tournament[tournamentPlace]?.finals[13]?.player1score
               }
             />
           </Box>
@@ -222,13 +222,13 @@ export default function STAG(params) {
             style={{ display: "flex", justifyContent: "center" }}
           >
             <FinalStage
-              player1={tournament[tournamentPlace]?.finals[14].player1}
-              player2={tournament[tournamentPlace]?.finals[14].player2}
+              player1={tournament[tournamentPlace]?.finals[14]?.player1}
+              player2={tournament[tournamentPlace]?.finals[14]?.player2}
               player2score={
-                tournament[tournamentPlace]?.finals[14].player2score
+                tournament[tournamentPlace]?.finals[14]?.player2score
               }
               player1score={
-                tournament[tournamentPlace]?.finals[14].player1score
+                tournament[tournamentPlace]?.finals[14]?.player1score
               }
             />
           </Box>

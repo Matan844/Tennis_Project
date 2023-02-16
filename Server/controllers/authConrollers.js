@@ -135,4 +135,23 @@ exports.addGroup = (req, res) => {
     }
   );
 }
+exports.deleteTournament = async(req, res) => {
+  const name = req.body.name;
 
+ try {
+    const deletedTournament = await Tournament.findOneAndDelete({
+      tournamentName: name,
+    });
+    if (!deletedTournament) {
+      return res.status(404).send('Tournament not found');
+    }
+
+    // Get the updated list of tournaments
+    const updatedTournaments = await Tournament.find();
+
+    res.status(200).send(updatedTournaments);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Server error');
+  }
+};

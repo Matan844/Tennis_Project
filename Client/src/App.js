@@ -41,7 +41,7 @@ function App() {
           <Typography
             variant="h6"
             component={StyledLink}
-            to="/HomePage"
+            to="/"
             sx={{ fontWeight: "bold" }}
           >
             עמוד הבית

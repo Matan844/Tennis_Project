@@ -89,7 +89,6 @@ const Update = async () => {
         ))}
       <br />
       <button onClick={Update}>אשר שינויים</button>
-      <p> {tournament[tournamentPlace]?.finals[0]?.player1}</p>
       <Box
         display="grid"
         gridTemplateColumns="repeat(12, 1fr)"
@@ -116,7 +115,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[0].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[0]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 0);
                 }}
@@ -126,7 +125,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[0].player1score
+                  tournament[tournamentPlace]?.finals[0]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 0);
@@ -137,7 +136,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[0].player2score
+                  tournament[tournamentPlace]?.finals[0]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 0);
@@ -151,7 +150,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[1].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[1]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 1);
                 }}
@@ -160,7 +159,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[1].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[1]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 1);
                 }}
@@ -170,7 +169,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[1].player2score
+                  tournament[tournamentPlace]?.finals[1]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 1);
@@ -181,7 +180,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[1].player1score
+                  tournament[tournamentPlace]?.finals[1]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 1);
@@ -195,7 +194,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[2].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[2]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 2);
                 }}
@@ -204,7 +203,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[2].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[2]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 2);
                 }}
@@ -214,7 +213,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[2].player2score
+                  tournament[tournamentPlace]?.finals[2]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 2);
@@ -225,7 +224,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[2].player1score
+                  tournament[tournamentPlace]?.finals[2]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 2);
@@ -239,7 +238,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[3].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[3]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 3);
                 }}
@@ -248,7 +247,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[3].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[3]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 3);
                 }}
@@ -258,7 +257,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[3].player2score
+                  tournament[tournamentPlace]?.finals[3]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 3);
@@ -269,7 +268,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[3].player1score
+                  tournament[tournamentPlace]?.finals[3]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 3);
@@ -283,7 +282,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[4].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[4]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 4);
                 }}
@@ -292,7 +291,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[4].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[4]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 4);
                 }}
@@ -302,7 +301,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[4].player2score
+                  tournament[tournamentPlace]?.finals[4]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 4);
@@ -313,7 +312,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[4].player1score
+                  tournament[tournamentPlace]?.finals[4]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 4);
@@ -327,7 +326,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[5].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[5]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 5);
                 }}
@@ -336,7 +335,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[5].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[5]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 5);
                 }}
@@ -346,7 +345,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[5].player2score
+                  tournament[tournamentPlace]?.finals[5]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 5);
@@ -357,7 +356,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[5].player1score
+                  tournament[tournamentPlace]?.finals[5]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 5);
@@ -371,7 +370,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[6].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[6]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 6);
                 }}
@@ -380,7 +379,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[6].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[6]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 6);
                 }}
@@ -390,7 +389,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[6].player2score
+                  tournament[tournamentPlace]?.finals[6]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 6);
@@ -401,7 +400,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[6].player1score
+                  tournament[tournamentPlace]?.finals[6]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 6);
@@ -415,7 +414,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[7].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[7]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 7);
                 }}
@@ -424,7 +423,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[7].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[7]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 7);
                 }}
@@ -434,7 +433,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[7].player2score
+                  tournament[tournamentPlace]?.finals[7]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 7);
@@ -445,7 +444,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[7].player1score
+                  tournament[tournamentPlace]?.finals[7]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 7);
@@ -471,7 +470,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[8].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[8]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 8);
                 }}
@@ -480,7 +479,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[8].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[8]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 8);
                 }}
@@ -490,7 +489,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[8].player2score
+                  tournament[tournamentPlace]?.finals[8]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 8);
@@ -501,7 +500,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[8].player1score
+                  tournament[tournamentPlace]?.finals[8]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 8);
@@ -515,7 +514,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[9].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[9]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 9);
                 }}
@@ -524,7 +523,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[9].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[9]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 9);
                 }}
@@ -534,7 +533,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[9].player2score
+                  tournament[tournamentPlace]?.finals[9]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 9);
@@ -545,7 +544,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[9].player1score
+                  tournament[tournamentPlace]?.finals[9]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 9);
@@ -559,7 +558,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[10].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[10]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 10);
                 }}
@@ -568,7 +567,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[10].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[10]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 10);
                 }}
@@ -578,7 +577,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[10].player2score
+                  tournament[tournamentPlace]?.finals[10]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 10);
@@ -589,7 +588,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[10].player1score
+                  tournament[tournamentPlace]?.finals[10]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 10);
@@ -603,7 +602,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[11].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[11]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 11);
                 }}
@@ -612,7 +611,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[11].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[11]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 11);
                 }}
@@ -622,7 +621,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[11].player2score
+                  tournament[tournamentPlace]?.finals[11]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 11);
@@ -633,7 +632,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[11].player1score
+                  tournament[tournamentPlace]?.finals[11]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 11);
@@ -660,7 +659,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[12].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[12]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 12);
                 }}
@@ -669,7 +668,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[12].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[12]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 12);
                 }}
@@ -679,7 +678,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[12].player2score
+                  tournament[tournamentPlace]?.finals[12]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 12);
@@ -690,7 +689,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[12].player1score
+                  tournament[tournamentPlace]?.finals[12]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 12);
@@ -704,7 +703,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[13].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[13]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 13);
                 }}
@@ -713,7 +712,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[13].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[13]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 13);
                 }}
@@ -723,7 +722,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[13].player2score
+                  tournament[tournamentPlace]?.finals[13]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 13);
@@ -734,7 +733,7 @@ const Update = async () => {
             player1score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[13].player1score
+                  tournament[tournamentPlace]?.finals[13]?.player1score
                 }
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 13);
@@ -753,7 +752,7 @@ const Update = async () => {
           <FinalStage
             player1={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[14].player1}
+                defaultValue={tournament[tournamentPlace]?.finals[14]?.player1}
                 onChange={(e) => {
                   handlechangeplayer1(e.target.value, 14);
                 }}
@@ -762,7 +761,7 @@ const Update = async () => {
             }
             player2={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[14].player2}
+                defaultValue={tournament[tournamentPlace]?.finals[14]?.player2}
                 onChange={(e) => {
                   handlechangeplayer2(e.target.value, 14);
                 }}
@@ -772,7 +771,7 @@ const Update = async () => {
             player2score={
               <input
                 defaultValue={
-                  tournament[tournamentPlace]?.finals[14].player2score
+                  tournament[tournamentPlace]?.finals[14]?.player2score
                 }
                 onChange={(e) => {
                   handlechangeplayer2score(e.target.value, 14);
@@ -782,7 +781,7 @@ const Update = async () => {
             }
             player1score={
               <input
-                defaultValue={tournament[tournamentPlace]?.finals[14].player1score}
+                defaultValue={tournament[tournamentPlace]?.finals[14]?.player1score}
                 onChange={(e) => {
                   handlechangeplayer1score(e.target.value, 14);
                 }}
