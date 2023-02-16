@@ -35,6 +35,7 @@ function App() {
   });
   return (
     <div className="App">
+
       <AppBar position="static" sx={{ backgroundColor: "#253B6E" }}>
         <Toolbar sx={{ justifyContent: "center", direction: "rtl" }}>
           <Typography
@@ -84,11 +85,12 @@ function App() {
           </div>
         </Toolbar>
       </AppBar>
+
       <Routes>
-        <Route path="/HomePage" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/EditStage" element={<STAG />}></Route>
         <Route path="/SignUp" element={<SignUp />}></Route>
-        <Route path="/" element={<LogIn />}></Route>
+        <Route path="/admin" element={<LogIn />}></Route>
         <Route path="/AllPlayers" element={<AllPlayers />}></Route>
         <Route path="/Scores" element={<AllScores />}></Route>
         <Route path="/AllGroupStages" element={<AllGroupStages />}></Route>
