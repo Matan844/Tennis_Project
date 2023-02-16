@@ -1,6 +1,7 @@
 import {useState,React} from "react";
 import "./GroupStage.css";
 import axios from "axios";
+
 export default function GroupStage({
   tournament,
   tournamentPlace,
@@ -44,7 +45,8 @@ export default function GroupStage({
       });
   };
   return (
-    <div className="container">
+    <div  style={{display: 'flex',
+      justifyContent: 'center' ,margin:'20px'}}   >
       <button onClick={Update}>אשר שינויים</button>
       <table>
         <thead>
