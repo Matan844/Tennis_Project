@@ -42,7 +42,6 @@ export default function STAG(params) {
   return (
     <div>
       <h1>בחר טורניר </h1>
-      <p> {tournament[tournamentPlace]?.finals[0]?.player1}</p>
       {tournament &&
         tournament?.map((t, i) => (
           <button key={i} onClick={() => showTournament(t.tournamentName, i)}>

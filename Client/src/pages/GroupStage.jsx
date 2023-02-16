@@ -44,7 +44,7 @@ export default function GroupStage({
       });
   };
   return (
-    <div className="container">
+    <div >
       <button onClick={Update}>אשר שינויים</button>
       <table>
         <thead>

@@ -3,12 +3,9 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { Details } from "./Gamecontext";
 import { useContext } from "react";
-import { Box, TextField, Button, FormLabel } from "@mui/material";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
-import "./SignUp.css"
-const theme = createTheme({
-  direction: "rtl",
-});
+import { Card, CardContent, TextField, Button } from "@mui/material";
+
+
 
 const LogIn = () => {
   const { token, setToken } = useContext(Details);
@@ -24,42 +21,34 @@ const LogIn = () => {
       .then((res) => {
         console.log(res.data);
         setToken(res.data.token)
-        navigate("/AllPlayers");
+        navigate("/");
       })
       .catch((error) => {});
   }
+
   return (
-    <div className="container">
-      <ThemeProvider theme={theme}>
-        <Box sx={{ maxWidth: 400, display: "flex", justifyContent: "center" }}>
-          <form className="form" onSubmit={handleSubmit}>
-            <FormLabel>שם הטורניר</FormLabel>
-            <TextField
-              fullWidth
-              onChange={(e) => setTournamentName(e.target.value)}
-              sx={{ mt: 2, mb: 1 }}
-            />
-            <FormLabel> תאריך התחלה</FormLabel>
-            <TextField
-              fullWidth
-              type="date"
-              onChange={(e) => setDateStart(e.target.value)}
-              sx={{ mt: 1, mb: 1 }}
-            />
-            <FormLabel>תאריך סיום</FormLabel>
-            <TextField
-              fullWidth
-              type="date"
-              onChange={(e) => setDateFinish(e.target.value)}
-              sx={{ mt: 1, mb: 2 }}
-            />
-            <Button variant="contained" type="submit">
-              צור את הטורניר
-            </Button>
-          </form>
-        </Box>
-      </ThemeProvider>
-    </div>
+    <Card sx={{ boxShadow: "0px 2px 6px rgba(0, 0, 0, 0.1)", width: 400 }}>
+      <CardContent>
+        <h1>התחבר כדי לנהל את התחרות</h1>
+        <TextField
+          fullWidth
+          label="שם משתמש"
+          variant="outlined"
+          margin="normal"
+          onChange={(e) => setUserName(e.target.value)}
+        />
+        <TextField
+          fullWidth
+          label="סיסמא"
+          variant="outlined"
+          margin="normal"
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <Button variant="contained" color="primary" onClick={handleSubmit}>
+          התחבר
+        </Button>
+      </CardContent>
+    </Card>
   );
 }
 
