@@ -18,13 +18,13 @@ function App() {
       {token && <NavLink to="/CreateTournament">צור טורניר</NavLink>}
       {token && <NavLink to="/AllPlayers">טבלת שחקנים</NavLink>}
       {token && <NavLink to="/AllGroupStages">עריכת שלב הבתים</NavLink>}
-      <NavLink to="/HomePage">עמוד הבית</NavLink>
+      <NavLink to="/">עמוד הבית</NavLink>
       <NavLink to="/Scores">תוצאות</NavLink>
       <Routes>
-        <Route path="/HomePage" element={<HomePage />}></Route>
+        <Route path="/" element={<HomePage />}></Route>
         <Route path="/EditStage" element={<STAG />}></Route>
         <Route path="/SignUp" element={<SignUp />}></Route>
-        <Route path="/" element={<LogIn />}></Route>
+        <Route path="/admin" element={<LogIn />}></Route>
         <Route path="/AllPlayers" element={<AllPlayers />}></Route>
         <Route path="/AllGroupStages" element={<AllGroupStages />}></Route>
         <Route path="/CreateTournament" element={<CreateTournament />}></Route>

@@ -10,7 +10,8 @@ root.render(
   <BrowserRouter>
   <React.StrictMode>
    <GameContext>
-    <App /></GameContext>
+    <App />
+    </GameContext>
   </React.StrictMode>
   </BrowserRouter>
 );
