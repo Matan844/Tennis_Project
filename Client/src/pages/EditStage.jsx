@@ -80,6 +80,7 @@ const Update = async () => {
  };
   return (
     <Box sx={{ width: 1 }} style={{ backgroundColor: "gray" }}>
+        
       <h1>בחר בטורניר שתרצה לערוך</h1>
       {tournament &&
         tournament?.map((t, i) => (

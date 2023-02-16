@@ -3,6 +3,9 @@ import ScoresDraw from "./ScoresDraw";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Button } from "@mui/material";
+import ImageMq from "../images/image2.jpg"
+
 const AllScores = () => {
   const [tournament, setTournament] = useState("");
   const [tournamentName, setTournamentName] = useState("");
@@ -39,17 +42,17 @@ const AllScores = () => {
   const timesArray = Array.from(Array(numOfGroup));
 
   return (
-    <div>
+    <div  style={{  backgroundImage: `url(${ImageMq})`,    backgroundSize: "cover" , height:"100vh" }}>
+      <Button variant="contained" size="large" onClick={() => navigate("/Scores")} disabled>שלב הבתים</Button>
+      <Button variant="contained" size="large" onClick={() => navigate("/EditStage")}>בית הגמר</Button>
       <h1>בחר טורניר </h1>
       {tournament &&
         tournament?.map((t, i) => (
-          <button key={i} onClick={() => showTournament(t.tournamentName, i)}>
+          <Button variant="contained" color="success" sx={{margin:'10px'}} key={i} onClick={() => showTournament(t.tournamentName, i)}>
             {t.tournamentName}
-          </button>
+          </Button>
         ))}
         <br/>
-      <button onClick={() => navigate("/Scores")}>שלב הבתים</button>
-      <button onClick={() => navigate("/EditStage")}>בית הגמר</button>
       {timesArray.map((_, index) => (
         <ScoresDraw
           key={index}
