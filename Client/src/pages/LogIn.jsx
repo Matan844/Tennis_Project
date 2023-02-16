@@ -3,6 +3,12 @@ import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
 import { Details } from "./Gamecontext";
 import { useContext } from "react";
+import { Box, TextField, Button, FormLabel } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import "./SignUp.css"
+const theme = createTheme({
+  direction: "rtl",
+});
 
 const LogIn = () => {
   const { token, setToken } = useContext(Details);
@@ -23,13 +29,38 @@ const LogIn = () => {
       .catch((error) => {});
   }
   return (
-    <div>
-      <h1>התחבר כדי לנהל את התחרות</h1>
-      <input placeholder="שם משתמש" onChange={(e)=>setUserName(e.target.value)}></input>
-      <input placeholder="סיסמא" onChange={(e)=>setPassword(e.target.value)}></input>
-    <button onClick={handleSubmit}>התחבר</button>
+    <div className="container">
+      <ThemeProvider theme={theme}>
+        <Box sx={{ maxWidth: 400, display: "flex", justifyContent: "center" }}>
+          <form className="form" onSubmit={handleSubmit}>
+            <FormLabel>שם הטורניר</FormLabel>
+            <TextField
+              fullWidth
+              onChange={(e) => setTournamentName(e.target.value)}
+              sx={{ mt: 2, mb: 1 }}
+            />
+            <FormLabel> תאריך התחלה</FormLabel>
+            <TextField
+              fullWidth
+              type="date"
+              onChange={(e) => setDateStart(e.target.value)}
+              sx={{ mt: 1, mb: 1 }}
+            />
+            <FormLabel>תאריך סיום</FormLabel>
+            <TextField
+              fullWidth
+              type="date"
+              onChange={(e) => setDateFinish(e.target.value)}
+              sx={{ mt: 1, mb: 2 }}
+            />
+            <Button variant="contained" type="submit">
+              צור את הטורניר
+            </Button>
+          </form>
+        </Box>
+      </ThemeProvider>
     </div>
-  )
+  );
 }
 
 export default LogIn

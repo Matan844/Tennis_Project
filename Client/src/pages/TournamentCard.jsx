@@ -11,8 +11,10 @@ import Dialog from "@material-ui/core/Dialog";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogActions from "@material-ui/core/DialogActions";
-
+import { Details } from "./Gamecontext"
+import { useContext } from "react";
 export default function TournamentCard() {
+const { token } = useContext(Details);
 const [tournament,setTournament]= useState([{}])
 const navigate=useNavigate()
 
@@ -100,13 +102,13 @@ const deleteTournament=(name)=>{
                   <Button size="small" onClick={goTo}>
                     ראה עוד
                   </Button>
-                  <Button
+                {token&&  <Button
                     variant="contained"
                     color="secondary"
                     onClick={handleClickOpen}
                   >
                     מחק טורניר
-                  </Button>
+                  </Button>}
                   <Dialog open={open} onClose={handleClose}>
                     <DialogTitle>וידוא מחיקה</DialogTitle>
                     <DialogContent>
