@@ -2,6 +2,12 @@ import React from 'react'
 import { useState } from 'react'
 import axios from 'axios'
 import { useNavigate } from 'react-router-dom'
+import { Box, TextField, Button, FormLabel } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import "./SignUp.css"
+const theme = createTheme({
+  direction: "rtl",
+});
 const CreateTournament = (props) => {
     const navigate=useNavigate()
     const [tournamentName,setTournamentName]=useState()
@@ -16,32 +22,57 @@ const CreateTournament = (props) => {
       "score5",
       "score6",
     ]);
-    const Create=async()=>{
-        await axios
-          .post("http://localhost:8000/createTournament", {
-            tournamentName,
-            dateStart,
-            dateFinish,
-            groupStage:{players,scores},
-            finals:{players,scores}
-          })
-          .then((res) => {
-            console.log(res.data);
-            navigate("/AllGroupStages")
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-    }
+    const handleSubmit = async () => {
+      await axios
+        .post("http://localhost:8000/createTournament", {
+          tournamentName,
+          dateStart,
+          dateFinish,
+          groupStage: { players, scores },
+          finals: { players, scores },
+        })
+        .then((res) => {
+          console.log(res.data);
+          navigate("/AllGroupStages");
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    };
   return (
-    <div>
-      <label>שם הטורניר</label>
-      <input onChange={(e) => setTournamentName(e.target.value)} />
-      <label>תאריך התחלה</label>
-      <input type="date" onChange={(e) => setDateStart(e.target.value)} />
-      <label>תאריך סוף</label>
-      <input type="date" onChange={(e) => setDateFinish(e.target.value)} />
-      <button onClick={Create}>צור את הטורניר</button>
+    <div className="container">
+      <ThemeProvider theme={theme}>
+        <Box sx={{ maxWidth: 400 }}>
+          <form className="form" onSubmit={handleSubmit}>
+            <FormLabel>שם הטורניר</FormLabel>
+            <TextField
+              fullWidth
+              value={tournamentName}
+              onChange={(e) => setTournamentName(e.target.value)}
+              sx={{ mt: 2, mb: 1 }}
+            />
+            <FormLabel>תאריך התחלה</FormLabel>
+            <TextField
+              fullWidth
+              type="date"
+              value={dateStart}
+              onChange={(e) => setDateStart(e.target.value)}
+              sx={{ mt: 1, mb: 1 }}
+            />
+            <FormLabel>תאריך סיום</FormLabel>
+            <TextField
+              fullWidth
+              type="date"
+              value={dateFinish}
+              onChange={(e) => setDateFinish(e.target.value)}
+              sx={{ mt: 1, mb: 2 }}
+            />
+            <Button variant="contained" type="submit">
+              צור את הטורניר
+            </Button>
+          </form>
+        </Box>
+      </ThemeProvider>
     </div>
   );
 }

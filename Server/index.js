@@ -28,4 +28,5 @@ app.post("/updateFinals", authController.updateFinals);
 app.post("/addGroup", authController.addGroup);
 app.get("/getAllTournaments", authController.getAllTournaments);
 app.post("/getAllGroups", authController.getAllGroups);
+app.post("/deleteTournament", authController.deleteTournament);
 app.listen(8000, () => console.log("listening on port 8000"));
