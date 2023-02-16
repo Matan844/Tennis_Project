@@ -5,20 +5,19 @@ const tournamentSchema = new mongoose.Schema({
     type: String,
   },
   dateStart: {
-    type: Date,
+    type: String,
   },
   dateFinish: {
-    type: Date,
+    type: String,
   },
   groupStage: [
     {
-      players: {
-
-      },
-      scores: {
-        
-      },
+      players: {},
+      scores: {},
     },
   ],
+  finals:{
+     type:Object,
+    },
 });
 module.exports = mongoose.model("Tournament", tournamentSchema);

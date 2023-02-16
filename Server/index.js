@@ -24,6 +24,7 @@ app.post("/login", authController.login);
 app.get("/getAllPlayers", authController.getAllPlayers);
 app.post("/createTournament", authController.createTournament);
 app.post("/addPlayers", authController.addPlayers);
+app.post("/updateFinals", authController.updateFinals);
 app.post("/addGroup", authController.addGroup);
 app.get("/getAllTournaments", authController.getAllTournaments);
 app.post("/getAllGroups", authController.getAllGroups);
